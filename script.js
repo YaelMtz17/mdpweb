@@ -197,3 +197,30 @@ setTimeout(function() {
     document.body.style.opacity = '1';
     document.body.style.visibility = 'visible';
 }, 1000);
+
+// Mejoras adicionales para la imagen canvas.jpg
+document.addEventListener('DOMContentLoaded', function() {
+    const canvasImg = document.querySelector('.canvas-img');
+    if (canvasImg) {
+        // Agregar efecto de zoom suave al hacer hover
+        canvasImg.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.02) translateY(-5px)';
+        });
+        
+        canvasImg.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) translateY(0)';
+        });
+        
+        // Agregar funcionalidad de clic para ampliar
+        canvasImg.addEventListener('click', function() {
+            this.classList.toggle('expanded');
+            if (this.classList.contains('expanded')) {
+                this.style.maxWidth = '90vw';
+                this.style.cursor = 'zoom-out';
+            } else {
+                this.style.maxWidth = '800px';
+                this.style.cursor = 'zoom-in';
+            }
+        });
+    }
+});

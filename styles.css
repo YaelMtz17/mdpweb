@@ -253,6 +253,19 @@ article li {
     box-shadow: var(--box-shadow);
 }
 
+/* Estilos específicos para la imagen canvas.jpg */
+.canvas-img {
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 8px 25px rgba(67, 97, 238, 0.15);
+    transition: var(--transition);
+    max-width: 800px;
+}
+
+.canvas-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(67, 97, 238, 0.25);
+}
+
 .img-container {
     position: relative;
     margin: 2rem 0;
@@ -341,6 +354,7 @@ article li {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
+    margin: 1.5rem 0;
 }   
 
 .scroll-indicator {
@@ -395,7 +409,6 @@ article li {
         transform: translateX(-50%) translateY(-5px);
     }
 }
-
 
 .skills-container {
     display: grid;
